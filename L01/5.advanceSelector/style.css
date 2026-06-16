@@ -1,0 +1,99 @@
+/* descendent selector */
+
+/* div p{
+    color: blueviolet;
+}
+
+p.para{
+    color: blue;
+} */
+
+ /* <div class="container">
+        <div class="box">
+            Hello from Box class
+        </div>
+    </div> */
+
+div div{
+
+}
+
+.box{
+
+}
+
+div.box{
+
+}
+
+.container .box{
+
+}
+
+div.container div.child{
+
+}
+
+/* child selector */
+
+/* ul>li{
+    color: green;
+} */
+
+/* immediate sibling */
+
+/* #fav + li{
+    color: brown;
+} */
+
+/* li+li{
+    color: blueviolet;
+} */
+
+/* General sibling */
+
+/* #fav~li{
+    color: brown;
+} */
+
+p#para + span{
+   color: blue;
+}
+
+
+/* psuedo class */
+
+
+a:link{
+    color: black;
+}
+a:visited{
+    color: green;
+}
+a:hover{
+    color: yellow;
+}
+a:active{
+    color: red;
+}
+
+
+/* ol li:first-child{
+    color: brown;
+}
+
+ol li:last-child{
+    color: blueviolet;
+} */
+
+/* ol li:nth-child(2n+1){
+    color: blue;
+} */
+
+/* ol li:nth-child(2n){
+    color: blue;
+} */
+
+ol li:nth-child(2n+3){
+    color: blue;
+}

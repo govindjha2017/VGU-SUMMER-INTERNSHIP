@@ -1,0 +1,35 @@
+
+/* Element selctor */
+p{
+    color: blue;
+}
+
+/* ID selector */
+
+#spcl{
+    color: brown;
+}
+
+p{
+    color: green;
+}
+
+/* class selctor */
+
+.para{
+    color: yellow;
+}
+
+/* Attribute selctor */
+
+a[href="https://www.github.com/"]{
+    color: red;
+}
+
+
+/* universal selctor */
+
+*{
+    margin: 0;
+    padding: 0;
+}
