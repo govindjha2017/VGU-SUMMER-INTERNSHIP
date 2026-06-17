@@ -1,0 +1,38 @@
+.container{
+    border: 3px solid red;
+    height: 300vh;
+    width: 80vw;
+}
+
+.child{
+    height: 50px;
+    width: 50px;
+    border: 2px solid green;
+}
+
+.child1{
+    position: relative;
+    left: 200px;
+    top: 300px;
+}
+
+.child2{
+    position: absolute;
+    /* top: 0px;
+    right: 100px; */
+
+    right: 0;
+    bottom: 0;
+}
+
+.child3{
+    position: fixed;
+
+    top: 0px;
+}
+
+.child4{
+    position: sticky;
+    left: 300px;
+    top: 20px;
+}

@@ -1,0 +1,26 @@
+.container{
+    height: 150px;
+    width: 150px;
+    border: 2px solid red;
+    width: 70vw;
+    height: 80vh;
+}
+
+.child{
+    border: 2px solid green;
+    height: 50%;
+    width: 90%;
+    font-size: 30px;
+}
+
+html{
+    font-size: 5px;
+}
+
+div.child p{
+    /* font-size: 24px;
+    font-size: 1.8em;
+    font-size: 0.8em; */
+    font-size: 1em;
+    font-size: 1rem;
+}
