@@ -1,0 +1,28 @@
+.card{
+    height: 350px;
+    width: 300px;
+    border: 2px solid black;
+    margin: 50px auto;
+    /* box-shadow: 5px 10px 10px black; */
+    box-shadow: -20px 5px 10px blue;
+}
+
+.image{
+    height: 200px;
+    /* border: 2px solid red; */
+}
+
+.image img{
+    height: 100%;
+    width: 100%;
+}
+
+.abc{
+    border: 2px solid red;
+    text-align: center;
+}
+
+#btn{
+    background-color: lightblue;
+     
+}
