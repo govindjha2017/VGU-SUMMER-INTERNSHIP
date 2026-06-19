@@ -1,0 +1,19 @@
+.container{
+    height: 80vh;
+    width: 80vw;
+    border: 5px solid red;
+    margin: auto;
+    /* background-color: aqua; */
+    background-image: url("https://plus.unsplash.com/premium_photo-1710119487743-48959c984d45?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-position: 0px 100px;
+    background-position: 0px -200px;
+    /* background-position: -100px -200px; */
+
+    color: red;
+    display: flex;
+    align-items: center;
+}
