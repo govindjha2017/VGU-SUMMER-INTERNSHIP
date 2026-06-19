@@ -1,0 +1,91 @@
+.box{
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+    background-color: teal;
+    /* animation-name: changePos;
+    animation-duration: 2s; */
+    position: relative;
+    animation-name: changeState;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    /* animation-delay: 3s; */
+    animation-direction: normal;
+    animation-direction: reverse;
+    animation-direction: alternate;
+    animation-direction: alternate-reverse;
+
+    animation-timing-function: ease-in;
+    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
+     animation-timing-function: cubic-bezier(0,-1.88, 1, 2.35);
+}
+
+@keyframes changeState{_
+    0%{
+        top: 0px;
+        left: 0px;
+        background-color: blue;
+    }
+    25%{
+        top: 0px;
+        left: 150px;
+        background-color: blueviolet;
+    }
+    50%{
+        top: 150px;
+        left: 150px;
+        background-color: brown;
+    }
+    75%{
+        top: 150px;
+        left: 0px;
+        background-color: aquamarine;
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+        background-color: greenyellow;
+    }
+
+}
+
+/* @keyframes changePos{
+    form{
+        background-color: aqua;
+    }
+    to{
+        background-color: brown;
+        border-radius: 50%;
+    }
+} */
+
+/* @keyframes changePos{
+    0%{
+        background-color: aqua;
+    }
+    50%{
+        background-color: blue;
+    }
+    100%{
+        background-color: brown;
+        border-radius: 50%;
+    }
+} */
+
+.container{
+    height: 40px;
+    border: 2px solid black;
+    background-color: rgb(220, 219, 219);
+}
+
+.child{
+    height: 100%;
+    background-color: rgb(154, 153, 153);
+    width: 85%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
