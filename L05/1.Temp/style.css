@@ -1,0 +1,24 @@
+.box{
+    height: 40px;
+    width: 80vw;
+    border: 1px solid red;
+    margin: auto;
+    background-color: #f0f0f0;
+}
+
+.child{
+    height: 100%;
+    width: 90%;
+    background-color: #616161;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.circle{
+    height: 200px;
+    width: 200px;
+    border: 2px solid red;
+    border-radius: 50%;
+}
