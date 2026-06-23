@@ -1,0 +1,16 @@
+.child{
+    border: 2px solid red;
+    display: none;
+}
+
+@media(max-width:300px){
+    /* yha par jo bhi propert lagaaoge wo sirf 0-300px screen size pr lagega */
+
+ 
+}
+
+@media(max-width:500px) and (min-width:301px){
+    .child2{
+        display: block;
+    }
+}
