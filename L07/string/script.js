@@ -18,3 +18,13 @@ console.log(str);
 
 
 // split
+
+// let a = str.split(" ")
+// console.log(a);
+// let str = "This is String and we are learning JS";
+
+// let b = str.split("is")
+// console.log(b);
+
+let c = str.split("a");
+console.log(c);
