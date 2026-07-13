@@ -5,6 +5,9 @@ const products = require("./data/products");
 app.set("view engine","ejs");
 app.use(express.urlencoded({extended:true}));
 
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+
 app.get("/",(req,res)=>{
     res.render("home");
 })
@@ -34,6 +37,33 @@ app.get("/products/:id",(req,res)=>{
     const product = products.find((item)=> item.id==id);
 
     res.render("show",{product})
+})
+
+app.get("/products/:id/edit",(req,res)=>{
+    const {id} = req.params;
+    const product = products.find((item)=> item.id==id);
+    res.render("edit",{product})
+})
+
+app.put("/products/:id",(req,res)=>{
+    const {id} = req.params;
+    const product = products.find((item)=> item.id==id);
+    const {name,image,price,desc} = req.body;
+    product.name = name;
+    product.price = price;
+    product.image = image;
+    product.desc = desc;
+    res.redirect("/products")
+})
+
+app.delete("/products/:id",(req,res)=>{
+    const {id} = req.params;
+    const product = products.find((item)=> item.id==id);
+    const ind = products.indexOf(product);
+
+    products.splice(ind,1);
+
+    res.redirect("/products")
 })
 
 const PORT = 5000;
