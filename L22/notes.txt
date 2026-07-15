@@ -1,0 +1,291 @@
+Microsoft Windows [Version 10.0.26200.8655]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\govin>mongosh
+Current Mongosh Log ID: 6a57173cf3608b722e7c2906
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.7.0
+Using MongoDB:          8.2.5
+Using Mongosh:          2.7.0
+mongosh 2.9.2 is available for download: https://www.mongodb.com/try/download/shell
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2026-06-30T10:15:42.254+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> show dbs;
+Ecom          172.00 KiB
+Ecom-CB       152.00 KiB
+Ecom-CC       172.00 KiB
+Ecom-CD        40.00 KiB
+Ecom-hons     180.00 KiB
+SEC-CC         24.00 KiB
+SSR-CB         84.00 KiB
+SSR-CC         80.00 KiB
+SSR-CD         76.00 KiB
+SSR-hons      128.00 KiB
+Todos          72.00 KiB
+abc            40.00 KiB
+admin          40.00 KiB
+auth_CB        64.00 KiB
+auth_CC        72.00 KiB
+auth_CD       108.00 KiB
+auth_hons      72.00 KiB
+config         72.00 KiB
+hons           24.00 KiB
+local          72.00 KiB
+sec-CB         24.00 KiB
+sec-CD         24.00 KiB
+temp           12.00 KiB
+temp_url       96.00 KiB
+test           40.00 KiB
+todoProj        8.00 KiB
+todoapp        64.00 KiB
+urlShortener  104.00 KiB
+url_CB        100.00 KiB
+url_CD        104.00 KiB
+url_cc        104.00 KiB
+url_hons       72.00 KiB
+test> show dbs;
+Ecom          172.00 KiB
+Ecom-CB       152.00 KiB
+Ecom-CC       172.00 KiB
+Ecom-CD        40.00 KiB
+Ecom-hons     180.00 KiB
+SEC-CC         24.00 KiB
+SSR-CB         84.00 KiB
+SSR-CC         80.00 KiB
+SSR-CD         76.00 KiB
+SSR-hons      128.00 KiB
+Todos          72.00 KiB
+abc            40.00 KiB
+admin          40.00 KiB
+auth_CB        64.00 KiB
+auth_CC        72.00 KiB
+auth_CD       108.00 KiB
+auth_hons      72.00 KiB
+config        108.00 KiB
+hons           24.00 KiB
+local          72.00 KiB
+sec-CB         24.00 KiB
+sec-CD         24.00 KiB
+temp           12.00 KiB
+temp_url       96.00 KiB
+test           40.00 KiB
+todoProj        8.00 KiB
+todoapp        64.00 KiB
+urlShortener  104.00 KiB
+url_CB        100.00 KiB
+url_CD        104.00 KiB
+url_cc        104.00 KiB
+url_hons       72.00 KiB
+test> use VGU
+switched to db VGU
+VGU> db
+VGU
+VGU> show collections
+
+VGU> db.createCollection("users")
+{ ok: 1 }
+VGU> show collections
+users
+VGU> db.cretaeCollection("admin")
+TypeError: db.cretaeCollection is not a function
+VGU> db.createCollection("admin")
+{ ok: 1 }
+VGU> show collections
+admin
+users
+VGU> db.users.insertOne({name:'rahul',age:45,city:"Delhi"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a571b49f3608b722e7c2907')
+}
+VGU> db.users.find({})
+[
+  {
+    _id: ObjectId('6a571b49f3608b722e7c2907'),
+    name: 'rahul',
+    age: 45,
+    city: 'Delhi'
+  }
+]
+VGU> db.users.insertOne({name:"teena",age:26,city:"Noida"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a571bc8f3608b722e7c2908')
+}
+VGU> db.users.find({})
+[
+  {
+    _id: ObjectId('6a571b49f3608b722e7c2907'),
+    name: 'rahul',
+    age: 45,
+    city: 'Delhi'
+  },
+  {
+    _id: ObjectId('6a571bc8f3608b722e7c2908'),
+    name: 'teena',
+    age: 26,
+    city: 'Noida'
+  }
+]
+VGU> db.admin.fin({})
+TypeError: db.admin.fin is not a function
+VGU> db.admin.find({})
+
+VGU> db.admin.insertMany([{name:'admin1',pass:'admin1@123"},{name:'admin2',pass:'admin2@123'},{name:'admin3',pass:'admin3@123"}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:62)
+
+> 1 | db.admin.insertMany([{name:'admin1',pass:'admin1@123"},{name:'admin2',pass:'admin2@123'},{name:'admin3',pass:'admin3@123"}])
+    |                                                               ^
+  2 |
+     db.admin.insertMany([{name:'admin1',pass:'admin1@123'},{name:'admin2',pVGU> db.admin.insertMany([{name:'admin1',pass:'admin1@123'},{name:'admin2',pVGU> db.admin.insertMany([{name:'admin1',pass:'admin1@123'
+| },{name:'admin2',pass:'admin2@123'},{name:'admin3',pass:'admin3@123'
+VGU>
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+VGU> db.admin.insertMany([{name:'admin1',pass:'admin1@123'},{name:'admin2',pass:'admin2@123'},{name:'admin3',pass:'admin3@123'}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a571df0f3608b722e7c2909'),
+    '1': ObjectId('6a571df0f3608b722e7c290a'),
+    '2': ObjectId('6a571df0f3608b722e7c290b')
+  }
+}
+VGU> db.admin.find({})
+[
+  {
+    _id: ObjectId('6a571df0f3608b722e7c2909'),
+    name: 'admin1',
+    pass: 'admin1@123'
+  },
+  {
+    _id: ObjectId('6a571df0f3608b722e7c290a'),
+    name: 'admin2',
+    pass: 'admin2@123'
+  },
+  {
+    _id: ObjectId('6a571df0f3608b722e7c290b'),
+    name: 'admin3',
+    pass: 'admin3@123'
+  }
+]
+VGU> db.users.insertOne({name:"meena",age:32,city:"Noida"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6a57223af3608b722e7c290c')
+}
+VGU> db.users.find({city:"Noida"})
+[
+  {
+    _id: ObjectId('6a571bc8f3608b722e7c2908'),
+    name: 'teena',
+    age: 26,
+    city: 'Noida'
+  },
+  {
+    _id: ObjectId('6a57223af3608b722e7c290c'),
+    name: 'meena',
+    age: 32,
+    city: 'Noida'
+  }
+]
+VGU> db.users.find({city:"Noida",name:"teena"})
+[
+  {
+    _id: ObjectId('6a571bc8f3608b722e7c2908'),
+    name: 'teena',
+    age: 26,
+    city: 'Noida'
+  }
+]
+VGU> db.admin.updateOne({name:"admin2"},{pass:"qwer@1234"})
+MongoInvalidArgumentError: Update document requires atomic operators
+VGU> db.admin.updateOne({name:"admin2"},{$set:{pass:"qwer@1234"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+VGU> db.admin.updateOne({city:"asb},{$set:{pass:"Hello@123"}})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:44)
+
+> 1 | db.admin.updateOne({city:"asb},{$set:{pass:"Hello@123"}})
+    |                                             ^
+  2 |
+
+VGU> '
+VGU> db.admin.updateOne({},{$set:{pass:"Hello@123"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+VGU> db.admin.updateMany({},{$set:{pass:"Hello@123"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+VGU> db.admin.updateMany({},{$set:{department:'account'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+VGU> db.users.find({})
+[
+  {
+    _id: ObjectId('6a571b49f3608b722e7c2907'),
+    name: 'rahul',
+    age: 45,
+    city: 'Delhi'
+  },
+  {
+    _id: ObjectId('6a571bc8f3608b722e7c2908'),
+    name: 'teena',
+    age: 26,
+    city: 'Noida'
+  },
+  {
+    _id: ObjectId('6a57223af3608b722e7c290c'),
+    name: 'meena',
+    age: 32,
+    city: 'Noida'
+  }
+]
+VGU> db.users.find({age:45})
+[
+  {
+    _id: ObjectId('6a571b49f3608b722e7c2907'),
+    name: 'rahul',
+    age: 45,
+    city: 'Delhi'
+  }
+]
+VGU> db.users.deleteOne({name:"meena"})
+{ acknowledged: true, deletedCount: 1 }
+VGU> db.admin.deleteOne({})
+{ acknowledged: true, deletedCount: 1 }
+VGU> db.admin.deleteMany({})
+{ acknowledged: true, deletedCount: 2 }
+VGU> db.users.deleteMany({age:26});
+{ acknowledged: true, deletedCount: 1 }
+VGU> db.admin.drop()
+true
+VGU> db.dropDatabase()
+{ ok: 1, dropped: 'VGU' }
+VGU>
